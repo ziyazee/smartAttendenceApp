@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </head>
+</html>
+<body class="container">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"><h3 style="color:white">Student attendence details</h3></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="jumbotron">
+    {% for i in yo %}
+    <div class="row">
+     <div class="col-sm-6"><h2 style="color:#546e7a">{{i.name}}</h2></div>
+     <div class="col-sm-6"><h2 style="color:#546e7a">{{i.usn}}</h2></div>
+   </div>
+
+    <h3 style="color:#546e7a">{{i.branch}}</h3>
+    {% endfor %}
+
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>CLasses taken</th>
+        <th>Classes attended</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Compiler design</td>
+        <td>43</td>
+        <td>38</td>
+        <td>90.00</td>
+
+      </tr>
+      <tr>
+        <td>Computer networks</td>
+        <td>43</td>
+        <td>38</td>
+        <td>90.00</td>
+
+      </tr>  <tr>
+          <td>CSCL</td>
+          <td>43</td>
+          <td>38</td>
+          <td>90.00</td>
+
+        </tr>
+        <tr>
+          <td>JAVA</td>
+          <td>43</td>
+          <td>38</td>
+          <td>90.00</td>
+
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>43</td>
+          <td>38</td>
+          <td>90.00</td>
+
+        </tr>
+        <tr>
+          <td>Computer graphics</td>
+          <td>43</td>
+          <td>38</td>
+          <td>90.00</td>
+
+        </tr>
+
+    </tbody>
+  </table>
+
+</body>

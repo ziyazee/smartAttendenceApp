@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </head>
+</html>
+<body class="container">
+ <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+   <!-- Links -->
+   <ul class="navbar-nav">
+     <li class="nav-item">
+       <a class="nav-link"><h3 style="color:white">Add student</h3></a>
+     </li>
+   </ul>
+ </nav>
+<br>
+<form method="POST" class="post-form"enctype="multipart/form-data">
+{% csrf_token %}
+
+<div class="container" style="border-left:100px;">
+<div class="form-group">
+   <label for="usr">USN:</label>
+ <input type="text" class="form-control" name="usn"id="usn"  />
+</div>
+
+
+<div class="form-group">
+ <label for="pwd">Name:</label>
+ <input type="text"class="form-control" name="name"id="name" />
+</div>
+<div class="form-group">
+ <label for="usr">Branch:</label>
+ <input type="text"class="form-control" name="branch"id="branch"/>
+</div>
+<div class="form-group">
+ <label for="pwd">Year:</label>
+ <input type="text"class="form-control" name="year"id="year"/>
+</div>
+<!-- {{form}} -->
+<input type="submit" class="btn btn-primary btn-lg"value="Submit">
+</div>
+</form>
